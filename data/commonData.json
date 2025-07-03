@@ -5,7 +5,7 @@
         "price": 124999,
         "offer": "₹5,000 cashback on HDFC Cards",
         "description": "6.8-inch QHD+ display, Snapdragon 8 Gen 2, 200MP camera.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.8,
         "category": "Mobile Phone"
     },
@@ -15,7 +15,7 @@
         "price": 37999,
         "offer": "Free Galaxy Buds worth ₹4,999",
         "description": "Super AMOLED display, 50MP triple camera, 5000mAh battery.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.5,
         "category": "Mobile Phone"
     },
@@ -25,7 +25,7 @@
         "price": 129900,
         "offer": "₹6,000 instant discount on HDFC Cards",
         "description": "6.1-inch Super Retina XDR, A16 chip, 48MP camera.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.9,
         "category": "Mobile Phone"
     },
@@ -35,7 +35,7 @@
         "price": 61999,
         "offer": "₹3,000 cashback on ICICI Bank Cards",
         "description": "6.1-inch Retina XDR, A15 chip, dual 12MP cameras.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.7,
         "category": "Mobile Phone"
     },
@@ -45,7 +45,7 @@
         "price": 39999,
         "offer": "Exchange bonus up to ₹2,000",
         "description": "Snapdragon 8+ Gen 1, 120Hz AMOLED, 100W SUPERVOOC.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.6,
         "category": "Mobile Phone"
     },
@@ -55,7 +55,7 @@
         "price": 29999,
         "offer": "₹1,500 off on SBI Cards",
         "description": "120Hz OLED, 200MP camera, 120W fast charging.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.4,
         "category": "Mobile Phone"
     },
@@ -65,7 +65,7 @@
         "price": 23999,
         "offer": "₹1,000 coupon available",
         "description": "Curved AMOLED, Dimensity 7050, 100MP camera.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.3,
         "category": "Mobile Phone"
     },
@@ -75,7 +75,7 @@
         "price": 29999,
         "offer": "No Cost EMI available",
         "description": "144Hz pOLED display, Dimensity 8020, 68W TurboPower.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.5,
         "category": "Mobile Phone"
     },
@@ -85,7 +85,7 @@
         "price": 32999,
         "offer": "₹2,000 instant discount",
         "description": "120Hz AMOLED, OIS camera, color-changing glass back.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.4,
         "category": "Mobile Phone"
     },
@@ -95,7 +95,7 @@
         "price": 34999,
         "offer": "Free screen replacement for 6 months",
         "description": "Snapdragon 8+ Gen 1, 120W fast charging, 120Hz AMOLED.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.6,
         "category": "Mobile Phone"
     },
@@ -105,7 +105,7 @@
         "price": 139990,
         "offer": "₹10,000 off on ICICI Credit Cards",
         "description": "13th Gen Intel i7, AMOLED Touch Display, 16GB RAM, 1TB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.8,
         "category": "Laptop"
     },
@@ -115,7 +115,7 @@
         "price": 42999,
         "offer": "Flat ₹2,000 exchange bonus",
         "description": "Snapdragon 7c Gen 2, 14-inch display, lightweight design.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.2,
         "category": "Laptop"
     },
@@ -125,7 +125,7 @@
         "price": 114900,
         "offer": "₹7,000 off for students",
         "description": "Apple M2 chip, 13.6-inch Liquid Retina, 8GB RAM, 256GB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.9,
         "category": "Laptop"
     },
@@ -135,7 +135,7 @@
         "price": 169900,
         "offer": "No Cost EMI for 12 months",
         "description": "Apple M3 chip, 14.2-inch XDR display, 16GB RAM, 512GB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.9,
         "category": "Laptop"
     },
@@ -145,7 +145,7 @@
         "price": 64999,
         "offer": "₹3,000 off on Axis Bank cards",
         "description": "Intel i5 12th Gen, 14-inch touch display, 512GB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.5,
         "category": "Laptop"
     },
@@ -155,7 +155,7 @@
         "price": 58999,
         "offer": "₹2,500 instant discount on HDFC Cards",
         "description": "Intel i5 11th Gen, 15.6-inch FHD, 8GB RAM, 512GB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.3,
         "category": "Laptop"
     },
@@ -165,7 +165,7 @@
         "price": 56990,
         "offer": "Free backpack worth ₹1,500",
         "description": "AMD Ryzen 7 7730U, 16GB RAM, 512GB SSD, FHD display.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.4,
         "category": "Laptop"
     },
@@ -175,7 +175,7 @@
         "price": 74990,
         "offer": "₹4,000 off on prepaid orders",
         "description": "Intel i7 13th Gen, 16GB RAM, 1TB SSD, OLED screen.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.6,
         "category": "Laptop"
     },
@@ -185,7 +185,7 @@
         "price": 58990,
         "offer": "Up to ₹3,000 off on exchange",
         "description": "AMD Ryzen 5 5500U, GTX 1650, 512GB SSD.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.2,
         "category": "Laptop"
     },
@@ -195,7 +195,7 @@
         "price": 48990,
         "offer": "Free wireless mouse with laptop",
         "description": "Intel i5 11th Gen, 8GB RAM, 512GB SSD, 14-inch FHD display.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.3,
         "category": "Laptop"
     },
@@ -205,7 +205,7 @@
         "price": 29990,
         "offer": "Flat ₹2,000 off on select cards",
         "description": "Industry-leading noise cancellation with up to 30 hours of battery life.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.8,
         "category": "Headphone"
     },
@@ -215,7 +215,7 @@
         "price": 19990,
         "offer": "Extra ₹1,000 on exchange",
         "description": "True wireless earbuds with advanced noise canceling and LDAC support.",
-        "image":"./1.jpg",
+        "image":"/images/1.jpg",
         "rating": 4.6,
         "category": "Headphone"
     },
@@ -225,7 +225,7 @@
         "price": 26990,
         "offer": "₹2,000 cashback on HDFC Cards",
         "description": "Active Noise Cancellation, Adaptive Transparency, Spatial Audio with dynamic head tracking.",
-        "image":"./1.jpg",
+        "image":"/images/1.jpg",
         "rating": 4.9,
         "category": "Headphone"
     },
@@ -235,7 +235,7 @@
         "price": 59900,
         "offer": "EMI starts at ₹2,500/month",
         "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and Spatial Audio.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.7,
         "category": "Headphone"
     },
@@ -245,7 +245,7 @@
         "price": 6999,
         "offer": "10% off on prepaid orders",
         "description": "Wireless Over-Ear ANC Headphones with 50 hours of battery life.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.4,
         "category": "Headphone"
     },
@@ -255,7 +255,7 @@
         "price": 3499,
         "offer": "Flat ₹500 discount",
         "description": "Hybrid ANC with 65 hours of playback and ASAP charging.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.2,
         "category": "Headphone"
     },
@@ -265,7 +265,7 @@
         "price": 7490,
         "offer": "₹1,000 off with Amazon coupon",
         "description": "Active noise cancellation, AAC codec support, and up to 30 hours battery.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.3,
         "category": "Headphone"
     },
@@ -275,7 +275,7 @@
         "price": 32990,
         "offer": "Free case worth ₹1,999",
         "description": "QuietComfort ANC, world-class noise cancelling, and lightweight comfort.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.7,
         "category": "Headphone"
     },
@@ -285,7 +285,7 @@
         "price": 1699,
         "offer": "₹100 coupon available",
         "description": "ANC neckband with 30dB noise reduction, 13.6mm drivers.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.1,
         "category": "Headphone"
     },
@@ -295,7 +295,7 @@
         "price": 4999,
         "offer": "Exchange and bank offers available",
         "description": "Active Noise Cancellation, 38-hour battery life, Dolby Atmos support.",
-        "image": "./1.jpg",
+        "image": "/images/1.jpg",
         "rating": 4.4,
         "category": "Headphone"
     }

@@ -5,6 +5,7 @@ import { useCart } from '@/context/CartContext';
 export interface Product {
     title: string;
     brand: string;
+    offer: string;
     price: number;
     image: string;
     description: string;
