@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '../components/Header';
 import React, { ReactNode } from 'react';
+import { CartProvider } from '@/context/CartContext';
 
 export const metadata = {
   title: 'MyShop',
@@ -14,8 +15,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
+        <CartProvider>
+          <Header />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

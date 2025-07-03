@@ -2,8 +2,10 @@
 import Link from 'next/link';
 import Image from 'next/image'; // Optional: If using next/image for better performance
 import { JSX } from 'react';
+import { useCart } from '@/context/CartContext';
 
 export default function MiddleHeader(): JSX.Element {
+    const { cartItems } = useCart();
     return (
         <div className="bg-white w-full border-b">
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -13,9 +15,9 @@ export default function MiddleHeader(): JSX.Element {
                     <Link href="/">
                         {/* You can use next/image instead of <img> for optimization */}
                         <img
-                            src="/logo.png"
+                            src="https://cdn11.bigcommerce.com/s-03842/images/stencil/750w/qbol_web_logo_1577699469__78699.original.png?compression=lossy"
                             alt="Quality Bearings Logo"
-                            className="w-[220px] h-auto"
+                            className="w-[270px] h-auto"
                         />
                         {/* OR use next/image like this:
             <Image
@@ -28,11 +30,11 @@ export default function MiddleHeader(): JSX.Element {
                 </div>
 
                 {/* === Search Box === */}
-                <div className="flex flex-1 max-w-2xl w-full">
+                <div className="flex flex-1 max-w-2xl w-full text-black">
                     <input
                         type="text"
                         placeholder="Search by reference"
-                        className="flex-grow border border-gray-400 rounded-l px-4 py-2 text-sm"
+                        className="flex-grow border border-gray-400 rounded-l text-black px-4 py-2 text-sm"
                     />
                     <button className="bg-gradient-to-r from-gray-700 to-blue-900 text-white px-4 py-2 rounded-r">
                         🔍
@@ -62,13 +64,16 @@ export default function MiddleHeader(): JSX.Element {
                     </Link>
 
                     {/* Cart */}
-                    <Link href="#" className="flex items-center gap-2 hover:text-blue-700 relative">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-                            viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M3 3h2l.4 2M7 13h13l-1.5 8H6.5L5 13h14M5 6h15l1 5H6L5 6z" />
-                        </svg>
-                        <div className="absolute -top-1 left-4 bg-blue-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</div>
+                    <Link href="/cart" className="flex items-center gap-2 hover:text-blue-700 relative">
+                        {cartItems.length > 0 && (
+                            <><svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
+                                viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                    d="M3 3h2l.4 2M7 13h13l-1.5 8H6.5L5 13h14M5 6h15l1 5H6L5 6z" />
+                            </svg><div className="absolute -top-1 left-4 bg-blue-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                                    {cartItems.length}
+                                </div></>
+                        )}
                         <span>Cart</span>
                     </Link>
                 </div>
