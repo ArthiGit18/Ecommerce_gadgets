@@ -3,12 +3,28 @@ import Link from 'next/link';
 import Image from 'next/image'; // Optional: If using next/image for better performance
 import { JSX } from 'react';
 import { useCart } from '@/context/CartContext';
+import { useState, useRef, useEffect } from 'react';
 
 export default function MiddleHeader(): JSX.Element {
     const { cartItems } = useCart();
+
+    const [isOpen, setIsOpen] = useState(false);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    // Close dropdown on outside click
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
     return (
         <div className="bg-white w-full border-b">
-            <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="max-w-8xl mx-auto px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
                 {/* === Logo === */}
                 <div className="flex-shrink-0">
@@ -44,7 +60,7 @@ export default function MiddleHeader(): JSX.Element {
                 {/* === Icon Links === */}
                 <div className="hidden lg:flex items-center space-x-8 text-sm text-blue-900">
                     {/* Sign In */}
-                    <Link href="/signup" className="flex items-center gap-2 hover:text-blue-700">
+                    <Link href="/signup" className="flex items-center gap-2 hover:text-blue-700 text-xl">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
                             viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -54,17 +70,38 @@ export default function MiddleHeader(): JSX.Element {
                     </Link>
 
                     {/* Recently Viewed */}
-                    <Link href="#" className="flex items-center gap-2 hover:text-blue-700">
+                    {/* <Link href="#" className="flex items-center gap-2 hover:text-blue-700 text-xl">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
                             viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round"
                                 d="M12 8v4l3 3m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>Recently<br />Viewed</span>
-                    </Link>
+                    </Link> */}
+
+                    <div className="relative" ref={wrapperRef}>
+                        {/* Recently Viewed */}
+                        <button
+                            onClick={() => setIsOpen((prev) => !prev)}
+                            className="flex items-center gap-2 hover:text-blue-700 text-xl"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Recently<br />Viewed</span>
+                        </button>
+
+                        {/* Dropdown */}
+                        {isOpen && (
+                            <div className="absolute top-full mt-2 right-0 w-64 bg-white border border-black shadow-lg rounded-md z-100 p-8">
+                                <h4 className="font-bold text-blue-800 mb-4 text-xl">Recently Viewed Products</h4>
+                                <p className="text-blue-700 text-sm text-center">No recently viewed items</p>
+                            </div>
+                        )}
+                    </div>
 
                     {/* Cart */}
-                    <Link href="/cart" className="flex items-center gap-2 hover:text-blue-700 relative">
+                    <Link href="/cart" className="flex items-center gap-2 hover:text-blue-700 relative text-xl">
                         {cartItems.length > 0 && (
                             <><svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
                                 viewBox="0 0 24 24">
@@ -74,7 +111,7 @@ export default function MiddleHeader(): JSX.Element {
                                     {cartItems.length}
                                 </div></>
                         )}
-                        <span>Cart</span>
+                        <span>Cart 🛒</span>
                     </Link>
                 </div>
 
