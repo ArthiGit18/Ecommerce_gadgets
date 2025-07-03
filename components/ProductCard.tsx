@@ -22,9 +22,9 @@ export default function ProductCard({ product }: Props) {
     const slug = product.title.toLowerCase().replace(/\s+/g, '-');
 
     return (
-        <div className="border rounded shadow p-4 bg-white hover:shadow-lg transition">
-            <img src={product.image} alt={product.title} className="w-full h-48 object-cover mb-4 rounded" />
-            <h2 className="text-lg font-bold">{product.title}</h2>
+        <div className="border-none rounded shadow p-4 bg-white hover:shadow-lg transition">
+            <img src={product.image} alt={product.title} className="w-full h-48 object-cover mb-5 rounded" />
+            <h2 className="text-lg font-bold text-black">{product.title}</h2>
             <p className="text-blue-600 font-semibold mb-2">₹{product.price.toLocaleString()}</p>
             <div className="flex justify-between mt-4">
                 <Link href={`/product/${slug}`}>

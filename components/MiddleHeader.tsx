@@ -8,7 +8,7 @@ export default function MiddleHeader(): JSX.Element {
     const { cartItems } = useCart();
     return (
         <div className="bg-white w-full border-b">
-            <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
                 {/* === Logo === */}
                 <div className="flex-shrink-0">
@@ -44,7 +44,7 @@ export default function MiddleHeader(): JSX.Element {
                 {/* === Icon Links === */}
                 <div className="hidden lg:flex items-center space-x-8 text-sm text-blue-900">
                     {/* Sign In */}
-                    <Link href="#" className="flex items-center gap-2 hover:text-blue-700">
+                    <Link href="/signup" className="flex items-center gap-2 hover:text-blue-700">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
                             viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round"

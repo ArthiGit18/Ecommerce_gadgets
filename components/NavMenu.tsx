@@ -1,8 +1,7 @@
 'use client';
-import { JSX, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
-// Type Definitions
 interface MegaMenuColumn {
     title: string;
     items: string[];
@@ -13,7 +12,7 @@ interface MenuItem {
     megaMenu?: MegaMenuColumn[];
 }
 
-export default function NavMenu(): JSX.Element {
+export default function NavMenu() {
     const [activeMenu, setActiveMenu] = useState<number | null>(null);
 
     const menus: MenuItem[] = [
@@ -56,46 +55,56 @@ export default function NavMenu(): JSX.Element {
     ];
 
     return (
-        <nav className="relative z-50 bg-[#151e4f] text-white text-sm font-semibold border-b-[3px] border-yellow-500">
-            <div className="max-w-7xl mx-auto px-4">
-                <ul className="flex items-center justify-center gap-6 py-3 relative">
-                    {menus.map((menu, idx) => (
-                        <li
-                            key={menu.label}
-                            className="group"
-                            onMouseEnter={() => setActiveMenu(idx)}
-                            onMouseLeave={() => setActiveMenu(null)}
-                        >
-                            <button className="flex items-center gap-1 hover:text-yellow-300">
-                                {menu.label}
-                                {menu.megaMenu && <span className="text-xs">▼</span>}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            {/* Mega Menu dropdown */}
-            {typeof activeMenu === 'number' && menus[activeMenu]?.megaMenu && (
-                <div className="absolute left-0 top-full w-full bg-white text-black py-8 shadow-2xl z-50">
-                    <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
-                        {menus[activeMenu].megaMenu!.map((col, i) => (
-                            <div key={i}>
-                                <h3 className="text-base font-bold text-[#151e4f] mb-3">{col.title}</h3>
-                                <ul className="space-y-1 text-sm text-gray-700">
-                                    {col.items.map((item, j) => (
-                                        <li key={j}>
-                                            <Link href="#" className="hover:underline hover:text-[#151e4f] transition">
-                                                {item}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+        <nav className="relative z-50 bg-[#151e4f] text-white text-sm font-semibold border-b-[5px] border-yellow-500">
+            <div
+                className="relative"
+                onMouseLeave={() => setActiveMenu(null)}
+                onMouseEnter={() => null}
+            >
+                <div className="max-w-7xl mx-auto px-4 py-5">
+                    <ul className="flex items-center justify-center gap-6 py-3">
+                        {menus.map((menu, idx) => (
+                            <li key={menu.label}>
+                                <button
+                                    onMouseEnter={() => setActiveMenu(idx)}
+                                    className="flex items-center gap-1 hover:text-yellow-300 text-lg"
+                                >
+                                    {menu.label}
+                                    {menu.megaMenu && <span className="text-xs">▼</span>}
+                                </button>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
-            )}
+
+                {/* Mega Menu shown when a menu is active */}
+                {typeof activeMenu === 'number' && menus[activeMenu]?.megaMenu && (
+                    <div className="absolute left-0 right-0 top-full bg-white text-black py-8 shadow-2xl z-40">
+                        <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
+                            {menus[activeMenu].megaMenu!.map((col, i) => (
+                                <div key={i}>
+                                    <h3 className="text-base font-bold text-[#151e4f] mb-3">{col.title}</h3>
+                                    <ul className="space-y-1 text-sm text-gray-700">
+                                        {col.items.map((item, j) => (
+                                            <li key={j}>
+                                                <button
+                                                    className="hover:underline hover:text-[#151e4f] transition w-full text-left"
+                                                    onClick={() => {
+                                                        window.location.href = `/?filter=${encodeURIComponent(item)}`;
+                                                        setActiveMenu(null);
+                                                    }}
+                                                >
+                                                    {item}
+                                                </button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
         </nav>
     );
 }

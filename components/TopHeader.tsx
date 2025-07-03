@@ -12,7 +12,7 @@ export default function TopHeader() {
   };
 
   return (
-    <div className="bg-black text-white text-md">
+    <div className="bg-black text-white text-sm">
       <div className="max-w-7xl mx-auto px-4 flex justify-end items-center h-8">
         {/* Left Section */}
         <div className="flex items-center space-x-4">
