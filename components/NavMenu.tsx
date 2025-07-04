@@ -54,10 +54,10 @@ export default function NavMenu() {
     ];
 
     return (
-        <nav className="relative z-50 bg-[#151e4f] text-white text-sm font-semibold border-b-[5px] border-yellow-500">
+        <nav className="relative z-50 bg-[#151e4f] text-white text-xs md:text-sm font-semibold border-b-[5px] border-yellow-500">
             <div className="relative" onMouseLeave={() => setActiveMenu(null)}>
                 <div className="max-w-7xl mx-auto px-4 py-5">
-                    <ul className="flex items-center justify-center gap-6 py-3">
+                    <ul className="flex flex-wrap items-center justify-center gap-4 md:gap-6 py-2">
                         {menus.map((menu, idx) => (
                             <li key={menu.label}>
                                 <Link

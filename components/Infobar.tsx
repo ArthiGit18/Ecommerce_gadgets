@@ -2,7 +2,7 @@ import { Star } from 'lucide-react';
 
 const InfoBar = () => {
     return (
-        <div className="bg-white border-t-4 border-indigo-900 shadow-md py-4 px-6 flex flex-wrap items-center justify-between text-sm font-semibold text-gray-800">
+        <div className="bg-white border-t-4 border-indigo-900 shadow-md py-4 px-6 flex flex-wrap items-center justify-between gap-y-5 text-sm font-semibold text-gray-800">
             <div className="flex items-center space-x-2">
                 <img src="https://www.qualitybearingsonline.com/content/NewSite/Customer-Service.png" alt="Handshake" className="w-10 h-10" />
                 <div>
