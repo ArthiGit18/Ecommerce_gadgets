@@ -1,20 +1,16 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-
 interface MegaMenuColumn {
     title: string;
     items: string[];
 }
-
 interface MenuItem {
     label: string;
     megaMenu?: MegaMenuColumn[];
 }
-
 export default function NavMenu() {
     const [activeMenu, setActiveMenu] = useState<number | null>(null);
-
     const menus: MenuItem[] = [
         {
             label: 'All',
@@ -52,7 +48,6 @@ export default function NavMenu() {
             ],
         },
     ];
-
     return (
         <nav className="relative z-50 bg-[#151e4f] text-white text-xs md:text-sm font-semibold border-b-[5px] border-yellow-500">
             <div className="relative" onMouseLeave={() => setActiveMenu(null)}>
@@ -72,7 +67,6 @@ export default function NavMenu() {
                         ))}
                     </ul>
                 </div>
-
                 {typeof activeMenu === 'number' && menus[activeMenu]?.megaMenu && (
                     <div className="absolute left-0 right-0 top-full bg-white text-black py-8 shadow-2xl z-40">
                         <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-10">

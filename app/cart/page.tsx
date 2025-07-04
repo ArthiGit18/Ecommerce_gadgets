@@ -1,24 +1,20 @@
 'use client';
 import { useCart } from '@/context/CartContext';
 import { useState } from 'react';
-
 export default function CartPage() {
     const { cartItems, updateQuantity, removeFromCart } = useCart();
     const [message, setMessage] = useState('');
-
     const subtotal = cartItems.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0
     );
-
     const handleCheckout = () => {
         setMessage('Thank you for shopping with us! 🙏 Your order is being processed.');
-        setTimeout(() => setMessage(''), 4000); // Hide message after 4 seconds
+        setTimeout(() => setMessage(''), 4000);
     };
-
     return (
         <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* === Left Side: Cart Items === */}
+            {}
             <div className="md:col-span-2">
                 <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
                 {cartItems.length === 0 ? (
@@ -31,7 +27,6 @@ export default function CartPage() {
                                 <div className="flex-1">
                                     <h2 className="font-semibold">{item.title}</h2>
                                     <p className="text-sm text-gray-600">₹{item.price.toLocaleString()} each</p>
-
                                     <div className="flex items-center mt-2">
                                         <button
                                             onClick={() => updateQuantity(item.title, -1)}
@@ -64,8 +59,7 @@ export default function CartPage() {
                     </div>
                 )}
             </div>
-
-            {/* === Right Side: Price Summary === */}
+            {}
             <div className="bg-white border rounded p-6 shadow">
                 <h2 className="text-lg font-bold mb-4 text-black">Price Summary</h2>
                 <div className="flex justify-between mb-2">
@@ -81,15 +75,13 @@ export default function CartPage() {
                     <span className="text-black">Total</span>
                     <span>₹{subtotal.toLocaleString()}</span>
                 </div>
-
                 <button
                     className="mt-6 w-full bg-yellow-500 hover:bg-yellow-600 text-black py-2 rounded"
                     onClick={handleCheckout}
                 >
                     Proceed to Checkout
                 </button>
-
-                {/* Humble thank-you message */}
+                {}
                 {message && (
                     <p className="mt-4 text-center text-green-700 text-sm font-medium animate-pulse">
                         {message}

@@ -3,13 +3,10 @@ import Link from 'next/link';
 import { JSX } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useState, useRef, useEffect } from 'react';
-
 export default function MiddleHeader(): JSX.Element {
     const { cartItems } = useCart();
-
     const [isOpen, setIsOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
-
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
@@ -19,12 +16,10 @@ export default function MiddleHeader(): JSX.Element {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-
     return (
         <div className="bg-white w-full border-b">
             <div className="max-w-8xl mx-auto px-4 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                
-                {/* === Logo + Cart (mobile only) === */}
+                {}
                 <div className="flex items-center justify-between md:justify-start md:gap-10">
                     <Link href="/">
                         <img
@@ -33,8 +28,7 @@ export default function MiddleHeader(): JSX.Element {
                             className="w-[200px] md:w-[270px] h-auto"
                         />
                     </Link>
-
-                    {/* Cart icon - visible only on small screens */}
+                    {}
                     <Link
                         href="/cart"
                         className="relative flex items-center gap-2 text-blue-900 hover:text-blue-700 text-xl lg:hidden"
@@ -51,8 +45,7 @@ export default function MiddleHeader(): JSX.Element {
                         </div>
                     </Link>
                 </div>
-
-                {/* === Search Bar === */}
+                {}
                 <div className="flex w-full text-black">
                     <input
                         type="text"
@@ -63,10 +56,9 @@ export default function MiddleHeader(): JSX.Element {
                         🔍
                     </button>
                 </div>
-
-                {/* === Desktop Only Icons === */}
+                {}
                 <div className="hidden lg:flex items-center space-x-8 text-sm text-blue-900">
-                    {/* Sign In */}
+                    {}
                     <Link href="/signup" className="flex items-center gap-2 hover:text-blue-700 text-xl">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                             <path
@@ -77,8 +69,7 @@ export default function MiddleHeader(): JSX.Element {
                         </svg>
                         <span>Sign In<br />Register</span>
                     </Link>
-
-                    {/* Recently Viewed */}
+                    {}
                     <div className="relative" ref={wrapperRef}>
                         <button
                             onClick={() => setIsOpen((prev) => !prev)}
@@ -93,7 +84,6 @@ export default function MiddleHeader(): JSX.Element {
                             </svg>
                             <span>Recently<br />Viewed</span>
                         </button>
-
                         {isOpen && (
                             <div className="absolute top-full mt-2 right-0 w-64 bg-white border border-black shadow-lg rounded-md z-100 p-8">
                                 <h4 className="font-bold text-blue-800 mb-4 text-xl">Recently Viewed Products</h4>
@@ -101,8 +91,7 @@ export default function MiddleHeader(): JSX.Element {
                             </div>
                         )}
                     </div>
-
-                    {/* Cart (desktop only) */}
+                    {}
                     <Link href="/cart" className="relative flex items-center gap-2 hover:text-blue-700 text-xl">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                             <path

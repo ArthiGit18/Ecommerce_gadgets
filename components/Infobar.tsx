@@ -1,5 +1,4 @@
 import { Star } from 'lucide-react';
-
 const InfoBar = () => {
     return (
         <div className="bg-white border-t-4 border-indigo-900 shadow-md py-4 px-6 flex flex-wrap items-center justify-between gap-y-5 text-sm font-semibold text-gray-800">
@@ -10,7 +9,6 @@ const InfoBar = () => {
                     <div className="text-xs font-normal">Over $300.00</div>
                 </div>
             </div>
-
             <div className="flex items-center space-x-2">
                 <img src="https://www.qualitybearingsonline.com/content/NewSite/UK-Delivery.png" alt="Delivery" className="w-10 h-10" />
                 <div>
@@ -18,7 +16,6 @@ const InfoBar = () => {
                     <div className="text-xs font-normal">Delivery</div>
                 </div>
             </div>
-
             <div className="flex items-center space-x-2">
                 <img src="https://store-03842.mybigcommerce.com/content/Queens_Award_Logo_black.png" alt="Award" className="w-10 h-10" />
                 <div>
@@ -26,7 +23,6 @@ const InfoBar = () => {
                     <div className="text-xs font-normal">Enterprise Winners</div>
                 </div>
             </div>
-
             <div className="flex items-center space-x-2">
                 <img src="https://www.qualitybearingsonline.com/content/NewSite/qms.png" alt="ISO" className="w-10 h-10" />
                 <div>
@@ -34,9 +30,7 @@ const InfoBar = () => {
                     <div className="text-xs font-normal">Cert. No.291342018</div>
                 </div>
             </div>
-
             <div className="flex flex-col items-center space-x-2 bg-yellow-400 px-3 py-1 rounded">
-               
                 <div className="flex items-center">
                      <span className="font-bold text-black">feefo</span>
                     {[...Array(5)].map((_, i) => (
@@ -50,5 +44,4 @@ const InfoBar = () => {
         </div>
     );
 };
-
 export default InfoBar;
