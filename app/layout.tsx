@@ -1,23 +1,27 @@
+// app/layout.tsx
 import './globals.css';
 import Header from '../components/Header';
-import React, { ReactNode } from 'react';
-import { CartProvider } from '@/context/CartContext';
 import Footer from '@/components/Footer';
+import CartWrapper from '@/components/CartWrapper';
+import { ReactNode } from 'react';
+
 export const metadata = {
   title: 'MyShop',
 };
+
 interface RootLayoutProps {
   children: ReactNode;
 }
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <CartProvider>
+        <CartWrapper>
           <Header />
           {children}
           <Footer />
-        </CartProvider>
+        </CartWrapper>
       </body>
     </html>
   );
