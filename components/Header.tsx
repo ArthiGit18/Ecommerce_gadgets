@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import TopHeader from './TopHeader';
 import MiddleHeader from './MiddleHeader';
 import NavMenu from './NavMenu';

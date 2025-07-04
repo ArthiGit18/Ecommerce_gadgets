@@ -22,7 +22,7 @@ const InfoBar = () => {
             <div className="flex items-center space-x-2">
                 <img src="https://store-03842.mybigcommerce.com/content/Queens_Award_Logo_black.png" alt="Award" className="w-10 h-10" />
                 <div>
-                    <div>Queen's Award For</div>
+                    <div>Queen Award For</div>
                     <div className="text-xs font-normal">Enterprise Winners</div>
                 </div>
             </div>

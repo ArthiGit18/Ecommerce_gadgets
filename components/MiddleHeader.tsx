@@ -8,7 +8,6 @@ export default function MiddleHeader(): JSX.Element {
     const { cartItems } = useCart();
 
     const [isOpen, setIsOpen] = useState(false);
-    const [iscartOpen, setIsCartOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown on outside click
