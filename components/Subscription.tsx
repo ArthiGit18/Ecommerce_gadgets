@@ -15,7 +15,7 @@ export default function SubscribeSection() {
                     <input
                         type="email"
                         placeholder="Your email address"
-                        className="px-4 py-2 text-black rounded-t-md sm:rounded-t-none sm:rounded-l-md sm:w-64 w-full focus:outline-none"
+                        className="px-4 py-2 text-black bg-amber-50 rounded-t-md sm:rounded-t-none sm:rounded-l-md sm:w-64 w-full focus:outline-none"
                     />
                     <button
                         type="submit"
