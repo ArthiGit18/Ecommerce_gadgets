@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image'; // Optional: If using next/image for better performance
 import { JSX } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useState, useRef, useEffect } from 'react';
@@ -9,6 +8,7 @@ export default function MiddleHeader(): JSX.Element {
     const { cartItems } = useCart();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [iscartOpen, setIsCartOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown on outside click
@@ -69,15 +69,6 @@ export default function MiddleHeader(): JSX.Element {
                         <span>Sign In<br />Register</span>
                     </Link>
 
-                    {/* Recently Viewed */}
-                    {/* <Link href="#" className="flex items-center gap-2 hover:text-blue-700 text-xl">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-                            viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M12 8v4l3 3m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Recently<br />Viewed</span>
-                    </Link> */}
 
                     <div className="relative" ref={wrapperRef}>
                         {/* Recently Viewed */}
@@ -99,19 +90,17 @@ export default function MiddleHeader(): JSX.Element {
                             </div>
                         )}
                     </div>
-
-                    {/* Cart */}
                     <Link href="/cart" className="flex items-center gap-2 hover:text-blue-700 relative text-xl">
-                        {cartItems.length > 0 && (
-                            <><svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-                                viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M3 3h2l.4 2M7 13h13l-1.5 8H6.5L5 13h14M5 6h15l1 5H6L5 6z" />
-                            </svg><div className="absolute -top-1 left-4 bg-blue-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                                    {cartItems.length}
-                                </div></>
-                        )}
-                        <span>Cart 🛒</span>
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M3 3h2l.4 2M7 13h13l-1.5 8H6.5L5 13h14M5 6h15l1 5H6L5 6z" />
+                        </svg>
+
+                        <div className="absolute -top-1 left-4 bg-blue-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                            {cartItems.length}
+                        </div>
+
+                        <span>Cart</span>
                     </Link>
                 </div>
 

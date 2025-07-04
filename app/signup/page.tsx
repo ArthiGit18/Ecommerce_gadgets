@@ -8,7 +8,6 @@ export default function SignUpForm() {
             <h1 className="text-3xl font-bold mb-6 text-center">New account</h1>
 
             <form className="space-y-8">
-                {/* Row 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label>Email Address <span className="text-red-600">*</span></label>
@@ -20,7 +19,6 @@ export default function SignUpForm() {
                     </div>
                 </div>
 
-                {/* Row 2 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label>Confirm Password <span className="text-red-600">*</span></label>
@@ -84,7 +82,6 @@ export default function SignUpForm() {
                     </div>
                 </div>
 
-                {/* Row 7 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label>Zip/Postal Code <span className="text-red-600">*</span></label>
@@ -100,8 +97,6 @@ export default function SignUpForm() {
                         </select>
                     </div>
                 </div>
-
-                {/* Row 8 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label>Sector You Operate In <span className="text-red-600">*</span></label>
@@ -117,21 +112,18 @@ export default function SignUpForm() {
                     </div>
                 </div>
 
-                {/* Row 9 */}
                 <div className="grid grid-cols-1">
                     <label>EIN/VAT Number</label>
                     <input type="text" className="w-full border border-gray-300 rounded px-4 py-2" />
                 </div>
 
-                {/* CAPTCHA */}
                 <div className="mt-6">
                     <label className="flex items-center gap-3">
                         <input type="checkbox" required />
-                        I'm not a robot
+                        Im not a robot
                     </label>
                 </div>
 
-                {/* Submit Button */}
                 <div className="mt-6">
                     <button type="submit" className="w-full bg-yellow-600 text-white font-semibold py-3 rounded hover:bg-yellow-700">
                         Create account
